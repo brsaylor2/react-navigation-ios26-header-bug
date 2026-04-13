@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "react-navigation-ios26-header-bug",
+    "slug": "react-navigation-ios26-header-bug",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "reactnavigationios26headerbug",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.reactnavigationios26headerbug"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.reactnavigationios26headerbug"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./assets/splash-icon.png"
+        }
+      ]
+    ]
+  }
+}
