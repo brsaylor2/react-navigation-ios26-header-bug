@@ -5,7 +5,7 @@ import {
   StaticParamList,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
 import { Home } from './screens/Home';
@@ -50,6 +50,25 @@ const HomeTabs = createBottomTabNavigator({
   },
 });
 
+function ProfileHeader() {
+  return (
+    <View style={{
+      borderWidth: 1,
+      borderColor: 'blue',
+      backgroundColor: 'cyan',
+      flex: 1,
+    }}>
+      <Text>full-width header component</Text>
+    </View>
+  );
+}
+
+function ProfileHeaderRight() {
+  return (
+    <Text>X</Text>
+  );
+}
+
 const RootStack = createNativeStackNavigator({
   screens: {
     HomeTabs: {
@@ -61,6 +80,10 @@ const RootStack = createNativeStackNavigator({
     },
     Profile: {
       screen: Profile,
+      options: {
+        headerTitle: () => <ProfileHeader />,
+        headerRight: () => <ProfileHeaderRight />
+      },
       linking: {
         path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
